@@ -57,10 +57,10 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 	use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
-	use({ "gbprod/cutlass.nvim", commit = "7611e52cd27b3bd2f391c56352271d8d272fc637" })
 	use({ "justinmk/vim-sneak", commit = "94c2de47ab301d476a2baec9ffda07367046bec9" })
 	use({ "easymotion/vim-easymotion", commit = "b3cfab2a6302b3b39f53d9fd2cd997e1127d7878" })
 	use({ "tpope/vim-surround", commit = "bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea" })
+	use({ "gbprod/cutlass.nvim", commit = "7611e52cd27b3bd2f391c56352271d8d272fc637" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
