@@ -11,7 +11,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 null_ls.setup({
-	debug = false,
+	debug = true,
 	sources = {
 		diagnostics.eslint,
 		formatting.prettier,
