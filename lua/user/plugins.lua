@@ -66,6 +66,8 @@ return packer.startup(function(use)
 		"jedrzejboczar/toggletasks.nvim",
 		commit = "4329ad580799f25c0a923a2d1e71a585ae0bbc48",
 	})
+	use({ "stevearc/dressing.nvim" })
+	use({ "rcarriga/nvim-notify" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
