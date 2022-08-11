@@ -29,8 +29,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>bn", ":bnext<CR>", opts)
+keymap("n", "<leader>bp", ":bprevious<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
@@ -66,8 +66,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files --hidden=true<CR>", opts)
-keymap("n", "<leader>fg", ":Telescope git_files --hidden=true<CR>", opts)
+keymap("n", "<leader>ff", "<cmd>lua require('user.telescope').project_files()<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fs", ":Telescope toggletasks select<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope toggletasks spawn<CR>", opts)
@@ -91,3 +90,13 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- No arrow keys
+keymap({ "i", "v", "n" }, "<Up>", "<nop>", opts)
+keymap({ "i", "v", "n" }, "<Down>", "<nop>", opts)
+keymap({ "i", "v", "n" }, "<Right>", "<nop>", opts)
+keymap({ "i", "v", "n" }, "<Left>", "<nop>", opts)
+
+-- Common mistake
+vim.cmd("cnoreabbrev W w")
+vim.cmd("cnoreabbrev Wq wq")
