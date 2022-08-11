@@ -14,4 +14,5 @@ configs.setup({
 		enable = true,
 	},
 	indent = { enable = true, disable = { "python", "css" } },
+	rainbow = { enable = true, extended_mode = true },
 })
