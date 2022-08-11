@@ -41,6 +41,6 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 -- Highlight Yanked Text
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 	callback = function()
-		vim.highlight.on_yank({ higroup = "TermCursor", timeout = 400 })
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 400 })
 	end,
 })
