@@ -69,9 +69,7 @@ return packer.startup(function(use)
 	use({ "rcarriga/nvim-notify" })
 
 	-- Colorschemes
-	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
-	use({ "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" })
-	use({ "EdenEast/nightfox.nvim", commit = "v1.0.0" })
+	use({ "EdenEast/nightfox.nvim", tag = "e2f961859cbfb2ba38147dc59fdd2314992c8b62" })
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
