@@ -35,6 +35,7 @@ telescope.setup({
 		},
 	},
 })
+vim.cmd("autocmd User TelescopePreviewerLoaded setlocal wrap")
 
 telescope.load_extension("fzf")
 telescope.load_extension("toggletasks")
