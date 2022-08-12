@@ -57,10 +57,16 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 	use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
-	use({ "justinmk/vim-sneak", commit = "94c2de47ab301d476a2baec9ffda07367046bec9" })
-	use({ "easymotion/vim-easymotion", commit = "b3cfab2a6302b3b39f53d9fd2cd997e1127d7878" })
-	use({ "tpope/vim-surround", commit = "bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea" })
+	use({
+		"kylechui/nvim-surround",
+		commit = "328f20c1d0e39ed30df3fc6334c093e8e8b72453",
+		config = function()
+			require("nvim-surround").setup({})
+		end,
+	})
+	use({ "ggandor/leap.nvim" })
 	use({ "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" })
+	use({ "ray-x/lsp_signature.nvim" })
 	use({
 		"jedrzejboczar/toggletasks.nvim",
 		commit = "4329ad580799f25c0a923a2d1e71a585ae0bbc48",
