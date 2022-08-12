@@ -68,12 +68,13 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>lua require('user.telescope').project_files()<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>fg", ":Telescope git_branches<CR>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fs", ":Telescope toggletasks select<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope toggletasks spawn<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
