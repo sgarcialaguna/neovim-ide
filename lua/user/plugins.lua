@@ -96,7 +96,7 @@ return packer.startup(function(use)
 	use({ "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" })
 
 	-- Telescope
-	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
+	use({ "nvim-telescope/telescope.nvim", commit = "8746347ac4065f5795e7bd33c7912ab1152cca4b" })
 	use({
 		"nvim-telescope/telescope-fzf-native.nvim",
 		commit = "6a33ecefa9b3d9ade654f9a7a6396a00c3758ca6",
