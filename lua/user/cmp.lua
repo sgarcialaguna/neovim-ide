@@ -91,6 +91,13 @@ cmp.setup({
 			"i",
 			"s",
 		}),
+		["<C-l>"] = cmp.mapping(function(fallback)
+			if luasnip.choice_active() then
+				luasnip.change_choice()
+			else
+				fallback()
+			end
+		end, { "i" }),
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },

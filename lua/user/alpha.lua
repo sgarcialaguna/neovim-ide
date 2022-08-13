@@ -18,7 +18,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("p", " " .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
 	dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", " " .. " Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", " " .. " Config", string.format(":e %s/nvim/init.lua <CR>", os.getenv("LOCALAPPDATA"))),
+	dashboard.button("c", " " .. " Config", string.format(":e %s\\nvim\\init.lua <CR>", os.getenv("LOCALAPPDATA"))),
 	dashboard.button("q", " " .. " Quit", ":qa<CR>"),
 }
 local function footer()
