@@ -40,5 +40,14 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", pyright_opts, opts)
 	end
 
+	if server == "tsserver" or server == "eslint" then
+		opts.handlers = {
+			["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+				-- Disable virtual_text
+				virtual_text = false,
+			}),
+		}
+	end
+
 	lspconfig[server].setup(opts)
 end
