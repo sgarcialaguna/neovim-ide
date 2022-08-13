@@ -9,9 +9,6 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local h = require("null-ls.helpers")
-local u = require("null-ls.utils")
-
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 null_ls.setup({
 	debug = true,
