@@ -44,3 +44,7 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 400 })
 	end,
 })
+
+--avoid losing focus when changing to another windows and lazygit is open
+vim.cmd("autocmd FocusGained * set mouse+=a")
+vim.cmd("autocmd FocusLost * set mouse=")

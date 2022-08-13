@@ -16,8 +16,8 @@ toggleterm.setup({
 	close_on_exit = true,
 	shell = "Powershell",
 	float_opts = {
-	border = "double",
-	}
+		border = "double",
+	},
 })
 
 function _G.set_terminal_keymaps()
