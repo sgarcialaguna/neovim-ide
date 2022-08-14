@@ -64,15 +64,14 @@ return packer.startup(function(use)
 			require("nvim-surround").setup({})
 		end,
 	})
-	use({ "ggandor/leap.nvim" })
+	use({ "ggandor/leap.nvim", commit = "801884c7de8ffeb64adb700c8685aa98d67e64bb" })
 	use({ "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" })
-	use({ "ray-x/lsp_signature.nvim" })
 	use({
 		"jedrzejboczar/toggletasks.nvim",
 		commit = "4329ad580799f25c0a923a2d1e71a585ae0bbc48",
 	})
-	use({ "stevearc/dressing.nvim" })
-	use({ "rcarriga/nvim-notify" })
+	use({ "stevearc/dressing.nvim", commit = "d886a1bb0b43a81af58e0331fedbe8b02ac414fa" })
+	use({ "rcarriga/nvim-notify", commit = "60bb6bfd6992549ee5336bbb761705b62797ce1d" })
 
 	-- Colorschemes
 	use({ "EdenEast/nightfox.nvim", tag = "e2f961859cbfb2ba38147dc59fdd2314992c8b62" })
@@ -87,12 +86,15 @@ return packer.startup(function(use)
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }) --snippet engine
+	use({ "rafamadriz/friendly-snippets", commit = "7339def34e46237eb7c9a893cb7d42dcb90e05e6" })
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" }) -- enable LSP
 	use({ "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" })
+	use({ "ray-x/lsp_signature.nvim", commit = "4665921ff8e30601c7c1328625b3abc1427a6143" })
+	use({ "onsails/lspkind.nvim", commit = "57e5b5dfbe991151b07d272a06e365a77cc3d0e7" })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "8746347ac4065f5795e7bd33c7912ab1152cca4b" })
@@ -108,11 +110,11 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
 	})
-	use({ "p00f/nvim-ts-rainbow" })
+	use({ "p00f/nvim-ts-rainbow", commit = "1e904f6d1b41adb9d3b87df2108dc4a315a72379" })
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
-	use({ "tpope/vim-fugitive", commit = "v3.7" })
+	use({ "tpope/vim-fugitive", tag = "v3.7" })
 
 	-- DAP
 	use({ "mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d" })

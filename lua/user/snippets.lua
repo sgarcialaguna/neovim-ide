@@ -85,6 +85,7 @@ ls.add_snippets("lua", {
 		)
 	),
 	s("snippet", fmt('s("{}", fmt([[{}]], {{{}}})),\n{}', { i(1), i(2), i(3), i(0) })),
+	s("use", fmt('use({{ "{}/{}" , commit="{}" }} )\n{}', { i(1), i(2), i(3), i(0) })),
 })
 
 -- Quick reload
