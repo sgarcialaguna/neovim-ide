@@ -9,9 +9,6 @@ bufferline.setup({
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
 		separator_style = "slant", -- | "thick" | "thin" | { 'any', 'any' },
-		numbers = function(opts)
-			return string.format("%s", opts.id)
-		end,
 		diagnostics = "nvim_lsp",
 		diagnostics_indicator = function(count, level, diagnostics_dict, context)
 			local icon = level:match("error") and " " or " "
