@@ -15,6 +15,8 @@ table.insert(vimgrep_arguments, "--glob")
 table.insert(vimgrep_arguments, "!.git/*")
 
 local actions = require("telescope.actions")
+local trouble = require("trouble.providers.telescope")
+
 telescope.setup({
 	defaults = {
 		prompt_prefix = " ",
@@ -30,7 +32,9 @@ telescope.setup({
 				["<Up>"] = actions.cycle_history_prev,
 				["<C-j>"] = actions.move_selection_next,
 				["<C-k>"] = actions.move_selection_previous,
+				["<c-t>"] = trouble.open_with_trouble,
 			},
+			n = { ["<c-t>"] = trouble.open_with_trouble },
 		},
 	},
 	pickers = {
