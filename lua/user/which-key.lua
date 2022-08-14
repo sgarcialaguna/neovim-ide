@@ -4,6 +4,20 @@ if not status_ok then
 end
 
 whichkey.register({
+	c = {
+		o = { "<cmd>lua require'qf'.open('c')<CR>", "Open quickfix list" },
+		c = { "<cmd>lua require'qf'.close('c')<CR>", "Close quickfix list" },
+		t = { "<cmd>lua require'qf'.toggle('c', true)<CR>", "Toggle quickfix list" },
+	},
+	d = {
+		["0"] = { "<cmd>lua require'diaglist'.open_buffer_diagnostics()<cr>", "Open buffer diagnostics" },
+		["1"] = { "<cmd>lua require'diaglist'.open_all_diagnostics()<cr>", "Open all diagnostics" },
+	},
+	l = {
+		o = { "<cmd>lua require'qf'.open('l')<CR>", "Open location list" },
+		c = { "<cmd>lua require'qf'.close('l')<CR>", "Close location list" },
+		t = { "<cmd>lua require'qf'.toggle('l', true)<CR>", "Toggle location list" },
+	},
 	g = {
 		name = "Git",
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },

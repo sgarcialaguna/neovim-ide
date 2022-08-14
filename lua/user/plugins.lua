@@ -72,6 +72,7 @@ return packer.startup(function(use)
 	})
 	use({ "stevearc/dressing.nvim", commit = "d886a1bb0b43a81af58e0331fedbe8b02ac414fa" })
 	use({ "rcarriga/nvim-notify", commit = "60bb6bfd6992549ee5336bbb761705b62797ce1d" })
+	use({ "ten3roberts/qf.nvim", commit = "6c60d175ecb1fe5e7f1dd71e8ade848d1d9d989b" })
 
 	-- Colorschemes
 	use({ "EdenEast/nightfox.nvim", tag = "e2f961859cbfb2ba38147dc59fdd2314992c8b62" })
@@ -95,7 +96,7 @@ return packer.startup(function(use)
 	use({ "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" })
 	use({ "ray-x/lsp_signature.nvim", commit = "4665921ff8e30601c7c1328625b3abc1427a6143" })
 	use({ "onsails/lspkind.nvim", commit = "57e5b5dfbe991151b07d272a06e365a77cc3d0e7" })
-
+	use({ "onsails/diaglist.nvim", commit = "6c43beac1ff07f6ef00f063090b5a6c9ed11b800" })
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "8746347ac4065f5795e7bd33c7912ab1152cca4b" })
 	use({
