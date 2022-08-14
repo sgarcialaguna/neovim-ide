@@ -7,6 +7,10 @@ whichkey.register({
 	c = {
 		o = { "<cmd>lua require'qf'.open('c')<CR>", "Open quickfix list" },
 		c = { "<cmd>lua require'qf'.close('c')<CR>", "Close quickfix list" },
+		J = { "<cmd>cnfile<CR>", "Next file" },
+		j = { "<cmd>cnext<CR>", "Next entry" },
+		k = { "<cmd>cprev<CR>", "Previous entry" },
+		K = { "<cmd>cpfile<CR>", "Previous file" },
 		t = { "<cmd>lua require'qf'.toggle('c', true)<CR>", "Toggle quickfix list" },
 	},
 	d = {
