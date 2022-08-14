@@ -8,8 +8,8 @@ local servers = {
 	"cssls",
 	"html",
 	"eslint",
-	-- "tsserver",
-	-- "pyright",
+	"tsserver",
+	"pyright",
 	"bashls",
 	"jsonls",
 	"yamlls",
@@ -35,19 +35,11 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
 	end
 
-	-- if server == "pyright" then
-	-- 	local pyright_opts = require("user.lsp.settings.pyright")
-	-- 	opts = vim.tbl_deep_extend("force", pyright_opts, opts)
-	-- end
-	--
-	-- if server == "tsserver" or server == "eslint" then
-	-- 	opts.handlers = {
-	-- 		["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-	-- 			-- Disable virtual_text
-	-- 			virtual_text = false,
-	-- 		}),
-	-- 	}
-	-- end
+	if server == "tsserver" or server == "eslint" or server == "pyright" then
+		opts.handlers = {
+			["textDocument/publishDiagnostics"] = function() end,
+		}
+	end
 
 	lspconfig[server].setup(opts)
 end
