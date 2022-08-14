@@ -73,6 +73,7 @@ return packer.startup(function(use)
 	use({ "stevearc/dressing.nvim", commit = "d886a1bb0b43a81af58e0331fedbe8b02ac414fa" })
 	use({ "rcarriga/nvim-notify", commit = "60bb6bfd6992549ee5336bbb761705b62797ce1d" })
 	use({ "ten3roberts/qf.nvim", commit = "6c60d175ecb1fe5e7f1dd71e8ade848d1d9d989b" })
+	use({ "chentoast/marks.nvim", commit = "b27cbb78e9082229590b396d3ae4fe07f1aeafe0" })
 
 	-- Colorschemes
 	use({ "EdenEast/nightfox.nvim", tag = "e2f961859cbfb2ba38147dc59fdd2314992c8b62" })
