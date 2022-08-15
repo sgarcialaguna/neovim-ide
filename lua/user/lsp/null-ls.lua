@@ -8,11 +8,13 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local code_actions = null_ls.builtins.code_actions
 
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 null_ls.setup({
 	debug = true,
 	sources = {
+		code_actions.eslint_d,
 		formatting.eslint_d,
 		diagnostics.eslint_d,
 		formatting.black,
