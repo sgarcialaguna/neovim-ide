@@ -21,7 +21,7 @@ telescope.setup({
 	defaults = {
 		prompt_prefix = " ",
 		selection_caret = " ",
-		path_display = { "relative" },
+		path_display = { "truncate" },
 		file_ignore_patterns = { ".git/", "node_modules" },
 		vimgrep_arguments = vimgrep_arguments,
 		show_hidden = true,
@@ -47,3 +47,4 @@ vim.cmd("autocmd User TelescopePreviewerLoaded setlocal wrap")
 
 telescope.load_extension("fzf")
 telescope.load_extension("toggletasks")
+telescope.load_extension("live_grep_args")
