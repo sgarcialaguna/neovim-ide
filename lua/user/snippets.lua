@@ -37,6 +37,7 @@ local loader = require("luasnip.loaders.from_vscode")
 loader.lazy_load({ paths = "./snippets/es7-react-js" })
 loader.lazy_load({ paths = "./snippets/vscode-jest-snippets" })
 loader.lazy_load({ paths = "./snippets/vscode-drf" })
+loader.lazy_load({ paths = "./snippets/material-ui" })
 
 ls.add_snippets("all", {
 	s(
