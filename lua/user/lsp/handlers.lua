@@ -11,7 +11,6 @@ M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
 
 M.setup = function()
 	local signs = {
-
 		{ name = "DiagnosticSignError", text = "" },
 		{ name = "DiagnosticSignWarn", text = "" },
 		{ name = "DiagnosticSignHint", text = "" },
@@ -48,6 +47,11 @@ M.setup = function()
 
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
 		border = "rounded",
+	})
+
+	vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+		pattern = { "*.tf", "*.tfvars" },
+		callback = vim.lsp.buf.formatting_sync,
 	})
 end
 

@@ -13,6 +13,7 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
+	"terraformls",
 }
 
 lsp_installer.setup()
