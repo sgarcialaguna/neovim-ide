@@ -51,7 +51,6 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
 	use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
 	use({ "tiagovla/scope.nvim", commit = "2db6d31de8e3a98d2b41c0f0d1f5dc299ee76875" })
-
 	use({ "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" })
 	use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
@@ -69,9 +68,15 @@ return packer.startup(function(use)
 	use({ "ggandor/leap.nvim", commit = "801884c7de8ffeb64adb700c8685aa98d67e64bb" })
 	use({ "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" })
 	use({
-		"jedrzejboczar/toggletasks.nvim",
-		commit = "4329ad580799f25c0a923a2d1e71a585ae0bbc48",
+		"stevearc/overseer.nvim",
+		commit = "be32b80e6e40f1fbcae09a1d069f4f0dca595b44",
+		config = {
+			function()
+				require("overseer").setup()
+			end,
+		},
 	})
+
 	use({ "stevearc/dressing.nvim", commit = "d886a1bb0b43a81af58e0331fedbe8b02ac414fa" })
 	use({ "rcarriga/nvim-notify", commit = "60bb6bfd6992549ee5336bbb761705b62797ce1d" })
 	use({ "ten3roberts/qf.nvim", commit = "6c60d175ecb1fe5e7f1dd71e8ade848d1d9d989b" })

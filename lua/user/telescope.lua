@@ -29,10 +29,10 @@ telescope.setup({
 		mappings = {
 			i = {
 				["<Esc>"] = actions.close,
-				["<Up>"] = actions.cycle_history_prev,
-				["<Down>"] = actions.cycle_history_next,
-				["<C-j>"] = actions.move_selection_next,
-				["<C-k>"] = actions.move_selection_previous,
+				["<C-Up>"] = actions.cycle_history_prev,
+				["<C-Down>"] = actions.cycle_history_next,
+				["Up"] = actions.move_selection_next,
+				["Down"] = actions.move_selection_previous,
 				["<c-t>"] = trouble.open_with_trouble,
 			},
 			n = { ["<c-t>"] = trouble.open_with_trouble },

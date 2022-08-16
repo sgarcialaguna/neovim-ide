@@ -116,11 +116,14 @@ vim.api.nvim_set_keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { s
 vim.api.nvim_set_keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
 
+vim.keymap.set("n", "<C-F5>", "<cmd>OverseerRun<cr>", opts)
+vim.keymap.set("n", "<S-F5>", "<cmd>OverseerToggle<cr>", opts)
+
 -- No arrow keys
-keymap({ "i", "v", "n" }, "<Up>", "<nop>", opts)
-keymap({ "i", "v", "n" }, "<Down>", "<nop>", opts)
-keymap({ "i", "v", "n" }, "<Right>", "<nop>", opts)
-keymap({ "i", "v", "n" }, "<Left>", "<nop>", opts)
+-- keymap({ "i", "v", "n" }, "<Up>", "<nop>", opts)
+-- keymap({ "i", "v", "n" }, "<Down>", "<nop>", opts)
+-- keymap({ "i", "v", "n" }, "<Right>", "<nop>", opts)
+-- keymap({ "i", "v", "n" }, "<Left>", "<nop>", opts)
 
 -- Common mistake
 vim.cmd("cnoreabbrev W w")
