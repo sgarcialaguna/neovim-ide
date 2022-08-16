@@ -19,8 +19,6 @@ local trouble = require("trouble.providers.telescope")
 
 telescope.setup({
 	defaults = {
-		prompt_prefix = " ",
-		selection_caret = " ",
 		path_display = { "truncate" },
 		file_ignore_patterns = { ".git/", "node_modules" },
 		vimgrep_arguments = vimgrep_arguments,
