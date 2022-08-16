@@ -30,6 +30,7 @@ telescope.setup({
 			i = {
 				["<Esc>"] = actions.close,
 				["<Up>"] = actions.cycle_history_prev,
+				["<Down>"] = actions.cycle_history_next,
 				["<C-j>"] = actions.move_selection_next,
 				["<C-k>"] = actions.move_selection_previous,
 				["<c-t>"] = trouble.open_with_trouble,

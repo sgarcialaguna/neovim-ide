@@ -6,7 +6,8 @@ end
 bufferline.setup({
 	options = {
 		close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+		middle_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+		right_mouse_command = "vertical sbuffer %d",
 		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
 		separator_style = "slant", -- | "thick" | "thin" | { 'any', 'any' },
 		diagnostics = "nvim_lsp",
