@@ -67,13 +67,15 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Plugins --
 
--- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+-- ChadTree
+keymap("n", "<leader>e", ":CHADopen<CR>")
 
 -- Telescope
 keymap("n", "<leader>fb", ":Telescope git_branches<CR>", opts)
 keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+keymap("n", "ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<C-F>", ":Telescope live_grep_args<CR>", opts)
+keymap("n", "fg", ":Telescope live_grep_args<CR>", opts)
 keymap("n", "<leader>fo", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fs", ":Telescope lsp_workspace_symbols <CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
