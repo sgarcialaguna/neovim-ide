@@ -77,7 +77,7 @@ keymap("n", "ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<C-F>", ":Telescope live_grep_args<CR>", opts)
 keymap("n", "fg", ":Telescope live_grep_args<CR>", opts)
 keymap("n", "<leader>fo", ":Telescope buffers<CR>", opts)
-keymap("n", "<leader>fs", ":Telescope lsp_workspace_symbols <CR>", opts)
+keymap("n", "<leader>fs", ":Telescope lsp_dynamic_workspace_symbols <CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 
 -- Git
@@ -108,6 +108,9 @@ keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
 
 keymap("n", "<C-F5>", "<cmd>OverseerRun<cr>", opts)
 keymap("n", "<S-F5>", "<cmd>OverseerToggle<cr>", opts)
+
+keymap("n", "]q", "<cmd>lua require'qf'.below('visible')<cr>")
+keymap("n", "[q", "<cmd>lua require'qf'.above('visible')<cr>")
 
 -- No arrow keys
 -- keymap({ "i", "v", "n" }, "<Up>", "<nop>", opts)
