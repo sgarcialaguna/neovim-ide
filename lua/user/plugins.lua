@@ -60,13 +60,8 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 	use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
-	use({
-		"kylechui/nvim-surround",
-		commit = "328f20c1d0e39ed30df3fc6334c093e8e8b72453",
-		config = function()
-			require("nvim-surround").setup({})
-		end,
-	})
+	use({ "tpope/vim-surround" })
+
 	use({ "ggandor/leap.nvim", commit = "801884c7de8ffeb64adb700c8685aa98d67e64bb" })
 	use("tpope/vim-repeat")
 	use({ "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" })
