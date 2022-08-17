@@ -16,6 +16,7 @@ table.insert(vimgrep_arguments, "!.git/*")
 
 local actions = require("telescope.actions")
 local trouble = require("trouble.providers.telescope")
+local sorters = require("telescope.sorters")
 
 telescope.setup({
 	defaults = {
@@ -41,9 +42,13 @@ telescope.setup({
 		find_files = {
 			find_command = { "rg", "--files", "--hidden", "--glob", "!.git/*" },
 		},
+		lsp_dynamic_workspace_symbols = {
+			sorter = sorters.get_fzy_sorter,
+		},
 	},
 })
 vim.cmd("autocmd User TelescopePreviewerLoaded setlocal wrap")
 
 telescope.load_extension("fzf")
 telescope.load_extension("live_grep_args")
+telescope.load_extension("toggletasks")
