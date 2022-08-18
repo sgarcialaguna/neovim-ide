@@ -110,9 +110,6 @@ if not vim.g.vscode then
 
 	keymap("n", "<C-F5>", "<cmd>Telescope toggletasks spawn<cr>", opts)
 	keymap("n", "<S-F5>", "<cmd>Telescope toggletasks select<cr>", opts)
-
-	keymap("n", "]q", "<cmd>lua require'qf'.below('visible')<cr>")
-	keymap("n", "[q", "<cmd>lua require'qf'.above('visible')<cr>")
 end
 
 -- No arrow keys
@@ -131,8 +128,6 @@ nnoremap / /\v
 vnoremap / /\v
 cnoremap %s/ %smagic/
 cnoremap \>s/ \>smagic/
-nnoremap :g/ :g/\v
-nnoremap :g// :g//
 ]])
 
 -- Save with C-s
