@@ -32,6 +32,7 @@ telescope.setup({
 				["Up"] = actions.move_selection_next,
 				["Down"] = actions.move_selection_previous,
 				["<c-t>"] = trouble.open_with_trouble,
+				["<c-f>"] = actions.to_fuzzy_refine,
 			},
 			n = { ["<c-t>"] = trouble.open_with_trouble },
 		},

@@ -68,6 +68,7 @@ return packer.startup(function(use)
 		end,
 	})
 	use({ "ggandor/leap.nvim", commit = "801884c7de8ffeb64adb700c8685aa98d67e64bb" })
+	use("tpope/vim-repeat")
 	use({ "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" })
 	use({
 		"stevearc/overseer.nvim",
@@ -77,6 +78,10 @@ return packer.startup(function(use)
 				require("overseer").setup()
 			end,
 		},
+	})
+	use({
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig",
 	})
 
 	use({ "stevearc/dressing.nvim", commit = "d886a1bb0b43a81af58e0331fedbe8b02ac414fa" })

@@ -43,6 +43,8 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+local navic = require("nvim-navic")
+
 lualine.setup({
 	options = {
 		globalstatus = true,
@@ -56,7 +58,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch" },
-		lualine_c = { diagnostics, filename },
+		lualine_c = { diagnostics, filename, { navic.get_location, cond = navic.is_available } },
 		lualine_x = { diff, spaces, "encoding", "fileformat", filetype },
 		lualine_y = { location },
 		lualine_z = { "progress" },
