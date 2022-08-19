@@ -42,25 +42,3 @@ local filename = {
 local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
-
-local navic = require("nvim-navic")
-
-lualine.setup({
-	options = {
-		globalstatus = true,
-		icons_enabled = true,
-		theme = "auto",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
-		disabled_filetypes = { "alpha", "dashboard" },
-		always_divide_middle = true,
-	},
-	sections = {
-		lualine_a = { "mode" },
-		lualine_b = { "branch" },
-		lualine_c = { diagnostics, filename, { navic.get_location, cond = navic.is_available } },
-		lualine_x = { diff, spaces, "encoding", "fileformat", filetype },
-		lualine_y = { location },
-		lualine_z = { "progress" },
-	},
-})

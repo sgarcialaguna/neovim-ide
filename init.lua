@@ -30,5 +30,6 @@ if not vim.g.vscode then
 	require("user.snippets")
 	require("user.quickfix")
 	require("user.trouble")
+    require("user.marks")
+    require("user.test")
 end
-require("user.marks")

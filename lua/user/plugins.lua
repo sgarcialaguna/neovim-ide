@@ -55,6 +55,7 @@ return packer.startup(function(use)
 		use({ "ms-jpq/chadtree", commit = "2e2ad117d7fff7e4568b8ae7771f245203a08c04" })
 
 		use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
+        use({ "moll/vim-bbye", commit="25ef93ac5a87526111f43e5110675032dbcacf56"})
 		use({ "tiagovla/scope.nvim", commit = "2db6d31de8e3a98d2b41c0f0d1f5dc299ee76875" })
 		use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
 		use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
@@ -63,7 +64,7 @@ return packer.startup(function(use)
 		use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 		use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
 
-	    use("tpope/vim-repeat")
+		use("tpope/vim-repeat")
 		use({ "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" })
 		use({
 			"jedrzejboczar/toggletasks.nvim",
@@ -77,8 +78,8 @@ return packer.startup(function(use)
 				end,
 			},
 		})
-        use("stevearc/stickybuf.nvim")
-        use("vim-test/vim-test")
+		use("stevearc/stickybuf.nvim")
+		use("vim-test/vim-test")
 
 		use({ "stevearc/dressing.nvim", commit = "d886a1bb0b43a81af58e0331fedbe8b02ac414fa" })
 		use({ "rcarriga/nvim-notify", commit = "60bb6bfd6992549ee5336bbb761705b62797ce1d" })

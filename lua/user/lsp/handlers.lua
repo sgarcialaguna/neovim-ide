@@ -75,7 +75,6 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 end
 
-local navic = require("nvim-navic")
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.resolved_capabilities.document_formatting = false
@@ -83,10 +82,6 @@ M.on_attach = function(client, bufnr)
 
 	if client.name == "sumneko_lua" then
 		client.resolved_capabilities.document_formatting = false
-	end
-
-	if client.name == "sumneko_lua" or client.name == "pyright" then
-		navic.attach(client, bufnr)
 	end
 
 	lsp_keymaps(bufnr)
