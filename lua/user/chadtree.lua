@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 local chadtree_settings = {
-	["view.open_direction"] = "right",
+	["view.open_direction"] = "left",
 	["theme.text_colour_set"] = "nord",
 }
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
