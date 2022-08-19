@@ -16,7 +16,6 @@ table.insert(vimgrep_arguments, "!.git/*")
 
 local actions = require("telescope.actions")
 local trouble = require("trouble.providers.telescope")
-local sorters = require("telescope.sorters")
 
 telescope.setup({
 	defaults = {

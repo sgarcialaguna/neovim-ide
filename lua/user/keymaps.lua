@@ -106,6 +106,8 @@ if not vim.g.vscode then
 	keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 	keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
 	keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
+	keymap("n", "<leader>xj", "<cmd>lua require('trouble').next({skip_groups = true, jump = true});<cr>", opts)
+	keymap("n", "<leader>xk", "<cmd>lua require('trouble').previous({skip_groups = true, jump = true});<cr>", opts)
 	keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
 
 	keymap("n", "<C-F5>", "<cmd>Telescope toggletasks spawn<cr>", opts)
