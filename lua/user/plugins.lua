@@ -84,6 +84,7 @@ return packer.startup(function(use)
 		requires = "neovim/nvim-lspconfig",
 	})
 	use("stevearc/stickybuf.nvim")
+	use("vim-test/vim-test")
 
 	use({ "stevearc/dressing.nvim", commit = "d886a1bb0b43a81af58e0331fedbe8b02ac414fa" })
 	use({ "rcarriga/nvim-notify", commit = "60bb6bfd6992549ee5336bbb761705b62797ce1d" })
