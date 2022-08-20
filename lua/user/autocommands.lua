@@ -50,5 +50,5 @@ vim.cmd("autocmd FocusGained * set mouse+=a")
 vim.cmd("autocmd FocusLost * set mouse=")
 
 -- Pin buffers
-vim.cmd("autocmd BufEnter * if &filetype=='CHADTree' | silent! PinBuffer | endif")
-vim.cmd("autocmd BufEnter * if &filetype=='toggleterm' | silent! PinBuffer | endif")
+vim.cmd("autocmd BufEnter * if &filetype=='CHADTree' | PinBuffer! | endif")
+vim.cmd("autocmd BufEnter * if &filetype=='toggleterm' | PinBuffer! | endif")
