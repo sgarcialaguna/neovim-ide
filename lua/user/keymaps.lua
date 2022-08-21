@@ -54,8 +54,8 @@ keymap("i", "jk", "<ESC>l", opts)
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+-- keymap("v", "<", "<gv", opts)
+-- keymap("v", ">", ">gv", opts)
 
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
@@ -134,5 +134,3 @@ cnoremap \>s/ \>smagic/
 
 -- Save with C-s
 keymap({ "i", "n" }, "<C-s>", "<cmd>:w<cr>", opts)
--- Select All with C-A
-keymap("n", "<C-a>", "ggVG", opts)
