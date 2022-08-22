@@ -128,8 +128,8 @@ vim.cmd("cnoreabbrev Wq wq")
 vim.cmd([[
 nnoremap / /\v
 vnoremap / /\v
-cnoremap %s/ %smagic/
-cnoremap \>s/ \>smagic/
+" cnoremap \>s/ \>smagic/
+" cnoremap %s/ %smagic/
 ]])
 
 -- Save with C-s

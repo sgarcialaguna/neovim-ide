@@ -21,7 +21,7 @@ if not vim.g.vscode then
 	require("user.indentline")
 	require("user.alpha")
 	require("user.lsp")
-	require("user.dap")
+	-- require("user.dap")
 	require("user.which-key")
 end
 require("user.leap")
