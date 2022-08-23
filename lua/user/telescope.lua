@@ -17,6 +17,14 @@ table.insert(vimgrep_arguments, "!.git/*")
 local actions = require("telescope.actions")
 local trouble = require("trouble.providers.telescope")
 
+local fzf_opts = {
+	fuzzy = true, -- false will only do exact matching
+	override_generic_sorter = true, -- override the generic sorter
+	override_file_sorter = true, -- override the file sorter
+	case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+	-- the default case_mode is "smart_case"
+}
+
 telescope.setup({
 	defaults = {
 		path_display = { "truncate" },
@@ -38,9 +46,16 @@ telescope.setup({
 		},
 	},
 	pickers = {
+		-- Manually set sorter, for some reason not picked up automatically
+		lsp_dynamic_workspace_symbols = {
+			sorter = telescope.extensions.fzf.native_fzf_sorter(fzf_opts),
+		},
 		find_files = {
 			find_command = { "rg", "--files", "--hidden", "--glob", "!.git/*" },
 		},
+	},
+	extensions = {
+		fzf = fzf_opts,
 	},
 })
 vim.cmd("autocmd User TelescopePreviewerLoaded setlocal wrap")
