@@ -53,6 +53,7 @@ return packer.startup(function(use)
 		use({ "kyazdani42/nvim-web-devicons", commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e" })
 		-- use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
 		use({ "ms-jpq/chadtree", commit = "2e2ad117d7fff7e4568b8ae7771f245203a08c04" })
+		use("mattn/emmet-vim")
 
 		use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
 		use({ "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" })
