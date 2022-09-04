@@ -130,11 +130,6 @@ return packer.startup(function(use)
 		-- Git
 		use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
 		use({ "tpope/vim-fugitive", tag = "v3.7" })
-
-		-- DAP
-		use({ "mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d" })
-		use({ "rcarriga/nvim-dap-ui", commit = "d76d6594374fb54abf2d94d6a320f3fd6e9bb2f7" })
-		use({ "mfussenegger/nvim-dap-python", commit = "86d263609c7253a6043b07e695f565ed8e34fcbf" })
 	end
 
 	-- Automatically set up your configuration after cloning packer.nvim

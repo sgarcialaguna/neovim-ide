@@ -1,9 +1,10 @@
 require("user.options")
 require("user.keymaps")
 require("user.plugins")
+require("user.leap")
+require("user.autocommands")
 if not vim.g.vscode then
 	require("user.notify")
-	require("user.autocommands")
 	require("user.colorscheme")
 	require("user.cmp")
 	require("user.telescope")
@@ -21,11 +22,7 @@ if not vim.g.vscode then
 	require("user.indentline")
 	require("user.alpha")
 	require("user.lsp")
-	-- require("user.dap")
 	require("user.which-key")
-end
-require("user.leap")
-if not vim.g.vscode then
 	require("user.signature")
 	require("user.snippets")
 	require("user.quickfix")

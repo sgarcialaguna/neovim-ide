@@ -90,16 +90,6 @@ if not vim.g.vscode then
 	-- Comment
 	keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 	keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
-	-- DAP
-	-- keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
-	-- keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
-	-- keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
-	-- keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
-	-- keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
-	-- keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
-	-- keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
-	-- keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
-	-- keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 	-- Trouble
 	keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
@@ -115,12 +105,6 @@ if not vim.g.vscode then
 	keymap("n", "<S-F5>", "<cmd>Telescope toggletasks select<cr>", opts)
 end
 
--- No arrow keys
--- keymap({ "i", "v", "n" }, "<Up>", "<nop>", opts)
--- keymap({ "i", "v", "n" }, "<Down>", "<nop>", opts)
--- keymap({ "i", "v", "n" }, "<Right>", "<nop>", opts)
--- keymap({ "i", "v", "n" }, "<Left>", "<nop>", opts)
-
 -- Common mistake
 vim.cmd("cnoreabbrev W w")
 vim.cmd("cnoreabbrev Wq wq")
@@ -135,3 +119,14 @@ vnoremap / /\v
 
 -- Save with C-s
 keymap({ "i", "n" }, "<C-s>", "<cmd>:w<cr>", opts)
+
+if vim.g.vscode then
+	vim.keymap.set({ "x", "o", "n" }, "gc", "<Plug>VSCodeCommentary")
+	vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine")
+
+	vim.keymap.set("n", "<leader>gg", "<cmd>call VSCodeNotify('workbench.view.scm')<CR>")
+	vim.keymap.set("n", "<leader>gj", "<cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR>")
+	vim.keymap.set("n", "<leader>gk", "<cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR>")
+	vim.keymap.set("n", "<leader>gr", "<cmd>call VSCodeNotify('git.revertSelectedRanges')<CR>")
+	vim.keymap.set("n", "<leader>gd", "<cmd>call VSCodeNotify('gitlens.diffLineWithWorking')<CR>")
+end
