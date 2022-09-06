@@ -121,8 +121,8 @@ vnoremap / /\v
 keymap({ "i", "n" }, "<C-s>", "<cmd>:w<cr>", opts)
 
 if vim.g.vscode then
-	vim.keymap.set({ "x", "o", "n" }, "gc", "<Plug>VSCodeCommentary")
-	vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine")
+	keymap({ "x", "n", "o" }, "gc", "<Plug>VSCodeCommentary", opts)
+	keymap("n", "gcc", "<Plug>VSCodeCommentaryLine", opts)
 
 	vim.keymap.set("n", "<leader>gg", "<cmd>call VSCodeNotify('workbench.view.scm')<CR>")
 	vim.keymap.set("n", "<leader>gj", "<cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR>")

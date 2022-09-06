@@ -1,8 +1,8 @@
 require("user.options")
 require("user.keymaps")
 require("user.plugins")
-require("user.leap")
 require("user.autocommands")
+require("user.leap")
 require("user.gitsigns")
 if not vim.g.vscode then
 	require("user.notify")

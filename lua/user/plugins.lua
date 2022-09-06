@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
 	use({ "tpope/vim-surround" })
 	use({ "ggandor/leap.nvim", commit = "801884c7de8ffeb64adb700c8685aa98d67e64bb" })
+	use({ "tpope/vim-fugitive", tag = "v3.7" })
 	if not vim.g.vscode then
 		use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
 		use({ "windwp/nvim-ts-autotag", commit = "044a05c4c51051326900a53ba98fddacd15fea22" }) -- Autopairs, integrates with both cmp and treesitter
@@ -129,7 +130,6 @@ return packer.startup(function(use)
 
 		-- Git
 		use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
-		use({ "tpope/vim-fugitive", tag = "v3.7" })
 	end
 
 	-- Automatically set up your configuration after cloning packer.nvim
