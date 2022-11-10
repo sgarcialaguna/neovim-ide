@@ -13,9 +13,14 @@ vim.g["test#custom_strategies"] = {
 	end,
 }
 
-vim.g["test#strategy"] = "tterm"
+-- vim.g["test#strategy"] = "tterm"
+vim.g["test#python#runner"] = "djangotest"
+vim.g["test#python#djangotest#file_pattern"] = "\\vtest.*(\\.py)$"
+vim.g["test#python#djangotest#executable"] =
+	'$env:DJANGO_SETTINGS_MODULE="drg.settings_test"; dotenv -f "../../Sources/Scripts/deployment/ansible/files/env/drg.env" run poetry run python manage.py test'
+vim.g["test#project_root"] = "./Sources/Web"
 vim.g["test#javascript#reactscripts#executable"] = "yarn react-scripts test"
-vim.g["test#javascript#jest#executable"] = "yarn react-scripts test"
+vim.g["test#javascript#jest#executable"] = "yarn test"
 
 vim.cmd([[
 function JestTransform(cmd) abort
