@@ -46,7 +46,11 @@ keymap("n", "<leader>q", "<cmd>Bdelete!<CR>", opts)
 keymap("n", "<leader>o", ":%bd|e#|bd#<CR>", opts)
 
 -- Better paste
-keymap("v", "p", '"_dP', opts)
+keymap({ "v", "x" }, "p", '"_dP', opts)
+
+-- Delete is not cut!
+keymap({ "n", "x" }, "<leader>d", '"_d')
+keymap({ "n", "x" }, "c", '"_c')
 
 -- Insert --
 -- Press jk fast to exit
