@@ -44,8 +44,10 @@ return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
 	use({ "tpope/vim-surround" })
+	use("tpope/vim-repeat")
 	use({ "ggandor/leap.nvim", commit = "801884c7de8ffeb64adb700c8685aa98d67e64bb" })
 	use({ "tpope/vim-fugitive", tag = "v3.7" })
+	use({ "tpope/vim-abolish", commit = "3f0c8faadf0c5b68bcf40785c1c42e3731bfa522" })
 	if not vim.g.vscode then
 		use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
 		use({ "windwp/nvim-ts-autotag", commit = "044a05c4c51051326900a53ba98fddacd15fea22" }) -- Autopairs, integrates with both cmp and treesitter
@@ -66,7 +68,6 @@ return packer.startup(function(use)
 		use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 		use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
 
-		use("tpope/vim-repeat")
 		use({ "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" })
 		use({
 			"jedrzejboczar/toggletasks.nvim",
