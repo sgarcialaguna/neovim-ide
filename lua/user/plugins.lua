@@ -90,7 +90,7 @@ return packer.startup(function(use)
 		use({ "chentoast/marks.nvim", commit = "b27cbb78e9082229590b396d3ae4fe07f1aeafe0" })
 
 		-- Colorschemes
-		use({ "EdenEast/nightfox.nvim", tag = "e2f961859cbfb2ba38147dc59fdd2314992c8b62" })
+		use({ "EdenEast/nightfox.nvim", commit = "e2f961859cbfb2ba38147dc59fdd2314992c8b62" })
 
 		-- cmp plugins
 		use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
