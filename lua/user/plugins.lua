@@ -91,6 +91,7 @@ return packer.startup(function(use)
 
 		-- Colorschemes
 		use({ "EdenEast/nightfox.nvim", commit = "e2f961859cbfb2ba38147dc59fdd2314992c8b62" })
+		use({ "LunarVim/onedarker.nvim" })
 
 		-- cmp plugins
 		use({ "hrsh7th/nvim-cmp", commit = "c37ea78941b93ef6b6bdd8274649ea8a0ce4f87a" }) -- The completion plugin
