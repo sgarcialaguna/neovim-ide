@@ -68,10 +68,10 @@ return packer.startup(function(use)
 		use({ "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" })
 		use({ "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" })
 
-		use({ "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" })
+		use({ "folke/which-key.nvim", commit = "61553aeb3d5ca8c11eea8be6eadf478062982ac9" })
 		use({
 			"jedrzejboczar/toggletasks.nvim",
-			commit = "4329ad580799f25c0a923a2d1e71a585ae0bbc48",
+			commit = "b22c85f8a5d93a85196e0e46126f3af972832f7a",
 			config = {
 				function()
 					require("toggletasks").setup({
@@ -81,12 +81,12 @@ return packer.startup(function(use)
 				end,
 			},
 		})
-		use("stevearc/stickybuf.nvim")
-		use("vim-test/vim-test")
+		use({ "stevearc/stickybuf.nvim", commit = "cde97217a7e81ea4488e0c32b8ae6c9d181156c8" })
+		use({ "vim-test/vim-test", commit = "ab7feab8cb139e5b4955cb4c6ddf52e968cb24be" })
 
-		use({ "stevearc/dressing.nvim", commit = "d886a1bb0b43a81af58e0331fedbe8b02ac414fa" })
-		use({ "rcarriga/nvim-notify", commit = "60bb6bfd6992549ee5336bbb761705b62797ce1d" })
-		use({ "ten3roberts/qf.nvim", commit = "6c60d175ecb1fe5e7f1dd71e8ade848d1d9d989b" })
+		use({ "stevearc/dressing.nvim", commit = "8c1500069cafc9cfd93bf5521b17fde060008022" })
+		use({ "rcarriga/nvim-notify", commit = "43c54aec682854b39a7e0e89b4c3ba00426d74a8" })
+		use({ "ten3roberts/qf.nvim", commit = "63deb0ecd16f57543e551c5e3d0725e938ad6fe7" })
 		use({ "chentoast/marks.nvim", commit = "b27cbb78e9082229590b396d3ae4fe07f1aeafe0" })
 
 		-- Colorschemes
