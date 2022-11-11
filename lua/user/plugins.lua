@@ -125,13 +125,13 @@ return packer.startup(function(use)
 		-- Treesitter
 		use({
 			"nvim-treesitter/nvim-treesitter",
-			commit = "518e27589c0463af15463c9d675c65e464efc2fe",
+			commit = "47bda4171aad2ee990a35ddb6319ceedc4d78b5d",
 		})
-		use({ "p00f/nvim-ts-rainbow", commit = "1e904f6d1b41adb9d3b87df2108dc4a315a72379" })
-		use({ "nvim-treesitter/nvim-treesitter-context", commit = "8e88b67d0dc386d6ba1b3d09c206f19a50bc0625" })
+		use({ "p00f/nvim-ts-rainbow", commit = "064fd6c0a15fae7f876c2c6dd4524ca3fad96750" })
+		use({ "nvim-treesitter/nvim-treesitter-context", commit = "0dd5eae6dbf226107da2c2041ffbb695d9e267c1" })
 
 		-- Git
-		use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
+		use({ "lewis6991/gitsigns.nvim", commit = "9ff7dfb051e5104088ff80556203634fc8f8546d" })
 	end
 
 	-- Automatically set up your configuration after cloning packer.nvim
