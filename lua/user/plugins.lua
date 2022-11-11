@@ -111,16 +111,16 @@ return packer.startup(function(use)
 		use({ "ray-x/lsp_signature.nvim", commit = "7a1845e8b5fc68dc5ea2a1a7d2d2b04395b6b190" })
 		use({ "onsails/lspkind.nvim", commit = "c68b3a003483cf382428a43035079f78474cd11e" })
 
-		use({ "folke/trouble.nvim", commit = "da61737d860ddc12f78e638152834487eabf0ee5" })
+		use({ "folke/trouble.nvim", commit = "ed65f84abc4a1e5d8f368d7e02601fc0357ea15e" })
 
 		-- Telescope
-		use({ "nvim-telescope/telescope.nvim", commit = "8746347ac4065f5795e7bd33c7912ab1152cca4b" })
+		use({ "nvim-telescope/telescope.nvim", commit = "7a4ffef931769c3fe7544214ed7ffde5852653f6" })
 		use({
 			"nvim-telescope/telescope-fzf-native.nvim",
-			commit = "6a33ecefa9b3d9ade654f9a7a6396a00c3758ca6",
+			commit = "65c0ee3d4bb9cb696e262bca1ea5e9af3938fc90",
 			run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 		})
-		use({ "nvim-telescope/telescope-live-grep-args.nvim" })
+		use({ "nvim-telescope/telescope-live-grep-args.nvim", commit = "7de3baef1ec4fb77f7a8195fe87bebd513244b6a" })
 
 		-- Treesitter
 		use({
