@@ -34,8 +34,12 @@ lazy.setup({
 	{ "numToStr/Comment.nvim", enabled = not vim.g.vscode },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", enabled = not vim.g.vscode },
 	{ "kyazdani42/nvim-web-devicons", enabled = not vim.g.vscode },
-	-- use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
-	{ "ms-jpq/chadtree", enabled = not vim.g.vscode },
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		enabled = not vim.g.vscode,
+		dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" },
+		config = true,
+	},
 	{ "mattn/emmet-vim", enabled = not vim.g.vscode },
 
 	{ "akinsho/bufferline.nvim", enabled = not vim.g.vscode },

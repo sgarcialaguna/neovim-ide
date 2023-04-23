@@ -54,7 +54,7 @@ keymap({ "n", "x" }, "c", '"_c')
 
 -- Insert --
 -- Press jk fast to exit
-keymap("i", "jk", "<ESC>l", opts)
+--[[ keymap("i", "jk", "<ESC>l", opts) ]]
 
 -- Visual --
 -- Stay in indent mode
@@ -76,7 +76,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- ChadTree
 if not vim.g.vscode then
-	keymap("n", "<leader>e", ":CHADopen<CR>")
+	keymap("n", "<leader>e", ":Neotree toggle<CR>")
 
 	-- Telescope
 	keymap("n", "<leader>fb", ":Telescope git_branches<CR>", opts)
