@@ -33,7 +33,6 @@ lazy.setup({
 	{ "windwp/nvim-ts-autotag", enabled = not vim.g.vscode }, -- Autopairs, integrates with both cmp and treesitter
 	{ "numToStr/Comment.nvim", enabled = not vim.g.vscode },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", enabled = not vim.g.vscode },
-	{ "kyazdani42/nvim-web-devicons", enabled = not vim.g.vscode },
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		enabled = not vim.g.vscode,
@@ -84,8 +83,7 @@ lazy.setup({
 	{ "hrsh7th/cmp-nvim-lua", enabled = not vim.g.vscode },
 
 	-- snippets
-	{ "L3MON4D3/LuaSnip", enabled = not vim.g.vscode }, --snippet engine
-	{ "rafamadriz/friendly-snippets", enabled = not vim.g.vscode },
+	{ "folke/tokyonight.nvim", enabled = not vim.g.vscode },
 
 	-- LSP
 	{ "neovim/nvim-lspconfig", enabled = not vim.g.vscode }, -- enable LSP
