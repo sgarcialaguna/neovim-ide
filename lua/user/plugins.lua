@@ -62,7 +62,7 @@ lazy.setup({
 			end,
 		},
 	},
-	{ "stevearc/stickybuf.nvim", enabled = not vim.g.vscode },
+	{ "stevearc/stickybuf.nvim", enabled = not vim.g.vscode, config = true },
 	{ "vim-test/vim-test", enabled = not vim.g.vscode },
 
 	{ "stevearc/dressing.nvim", enabled = not vim.g.vscode },
