@@ -28,6 +28,7 @@ lazy.setup({
 	"ggandor/leap.nvim",
 	"tpope/vim-fugitive",
 	"tpope/vim-abolish",
+	"rhysd/clever-f.vim",
 
 	{ "windwp/nvim-autopairs", enabled = not vim.g.vscode }, -- Autopairs, integrates with both cmp and treesitter
 	{ "windwp/nvim-ts-autotag", enabled = not vim.g.vscode }, -- Autopairs, integrates with both cmp and treesitter
