@@ -44,7 +44,7 @@ for _, server in pairs(servers) do
 	end
 
 	if server == "tsserver" then
-		opts.root_dir = util.root_pattern(".git")
+		opts.root_dir = util.root_pattern("pyproject.toml")
 	end
 
 	lspconfig[server].setup(opts)

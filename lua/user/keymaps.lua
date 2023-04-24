@@ -46,11 +46,22 @@ keymap("n", "<leader>q", "<cmd>Bdelete!<CR>", opts)
 keymap("n", "<leader>o", ":%bd|e#|bd#<CR>", opts)
 
 -- Better paste
-keymap({ "v", "x" }, "p", '"_dP', opts)
+--[[ keymap({ "v", "x" }, "p", '"_dP', opts) ]]
 
 -- Delete is not cut!
-keymap({ "n", "x" }, "<leader>d", '"_d')
-keymap({ "n", "x" }, "c", '"_c')
+keymap({ "n", "v" }, "d", '"_d')
+keymap({ "n" }, "D", '"_D')
+keymap({ "n", "v" }, "c", '"_c')
+keymap({ "n" }, "C", '"_C')
+keymap({ "n" }, "x", '"_x')
+keymap({ "n" }, "X", '"_X')
+
+keymap({ "n", "v" }, "<leader>d", "d")
+keymap({ "n" }, "<leader>D", "D")
+keymap({ "n", "v" }, "<leader>c", "c")
+keymap({ "n" }, "<leader>C", "C")
+keymap({ "n" }, "<leader>x", "x")
+keymap({ "n" }, "<leader>X", "X")
 
 -- Insert --
 -- Press jk fast to exit
@@ -96,13 +107,13 @@ if not vim.g.vscode then
 	keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
 
 	-- Trouble
-	keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
-	keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
-	keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
-	keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
-	keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
-	keymap("n", "<leader>xj", "<cmd>lua require('trouble').next({skip_groups = true, jump = true});<cr>", opts)
-	keymap("n", "<leader>xk", "<cmd>lua require('trouble').previous({skip_groups = true, jump = true});<cr>", opts)
+	keymap("n", "<leader>tx", "<cmd>TroubleToggle<cr>", opts)
+	keymap("n", "<leader>tw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+	keymap("n", "<leader>td", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+	keymap("n", "<leader>tl", "<cmd>TroubleToggle loclist<cr>", opts)
+	keymap("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>", opts)
+	keymap("n", "<leader>tj", "<cmd>lua require('trouble').next({skip_groups = true, jump = true});<cr>", opts)
+	keymap("n", "<leader>tk", "<cmd>lua require('trouble').previous({skip_groups = true, jump = true});<cr>", opts)
 	keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
 
 	keymap("n", "<C-F5>", "<cmd>Telescope toggletasks spawn<cr>", opts)

@@ -13,7 +13,7 @@ vim.g["test#custom_strategies"] = {
 	end,
 }
 
--- vim.g["test#strategy"] = "tterm"
+vim.g["test#strategy"] = "tterm"
 vim.g["test#python#runner"] = "djangotest"
 vim.g["test#python#djangotest#file_pattern"] = "\\vtest.*(\\.py)$"
 vim.g["test#python#djangotest#executable"] =

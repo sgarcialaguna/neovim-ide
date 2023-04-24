@@ -13,7 +13,6 @@ if not vim.g.vscode then
 	require("user.treesitter")
 	require("user.autopairs")
 	require("user.comment")
-	require("user.chadtree")
 	require("user.bufferline")
 	require("user.scope")
 	require("user.lualine")
