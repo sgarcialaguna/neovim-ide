@@ -8,6 +8,7 @@
   "cmp-nvim-lua": { "branch": "main", "commit": "f12408bdb54c39c23e67cab726264c10db33ada8" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
+  "cutlass.nvim": { "branch": "main", "commit": "708864fb2263226aabceaf5b2c2eee9841132668" },
   "dressing.nvim": { "branch": "master", "commit": "f5d7fa1fa5ce6bcebc8f07922f39b1eda4d01e37" },
   "emmet-vim": { "branch": "master", "commit": "def5d57a1ae5afb1b96ebe83c4652d1c03640f4d" },
   "gitsigns.nvim": { "branch": "main", "commit": "7dfe4be94b4f84a9931098f0f0f618d055e50bd5" },

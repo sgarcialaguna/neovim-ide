@@ -29,6 +29,11 @@ lazy.setup({
 	"tpope/vim-fugitive",
 	"tpope/vim-abolish",
 	"rhysd/clever-f.vim",
+    { "gbprod/cutlass.nvim", event="VeryLazy", config = {
+        cut_key = "x",
+        override_del = true,
+        exclude = { "ns", "nS" }
+    }},
 
 	{ "windwp/nvim-autopairs", enabled = not vim.g.vscode }, -- Autopairs, integrates with both cmp and treesitter
 	{ "windwp/nvim-ts-autotag", enabled = not vim.g.vscode }, -- Autopairs, integrates with both cmp and treesitter
