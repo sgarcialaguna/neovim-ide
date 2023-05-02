@@ -53,5 +53,6 @@
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-test": { "branch": "master", "commit": "8183037eccad54deb2100a9665157e4405fa4702" },
+  "vim-yoink": { "branch": "master", "commit": "89ed6934679fdbc3c20f552b50b1f869f624cd22" },
   "which-key.nvim": { "branch": "main", "commit": "94cb020ff33a1e0e22fac1c41663d2c439741f17" }
 }

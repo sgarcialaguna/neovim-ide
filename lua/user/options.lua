@@ -42,3 +42,7 @@ vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
 vim.opt.grepprg = "rg --vimgrep --no-heading"
 vim.opt.grepformat = "%f:%l:%c:%m,%f:%l:%m"
+
+vim.g.yoinkIncludeDeleteOperations = 1
+vim.g.yoinkSavePersistently = 1
+vim.g.AutoFormatPaste = 1

@@ -132,3 +132,12 @@ if vim.g.vscode then
 
 	vim.keymap.set("n", "<leader>xx", "<cmd>call VSCodeNotify('workbench.actions.view.problem')<CR>")
 end
+
+-- Yoink
+vim.keymap.set("n", "<A-n>", "<Plug>(YoinkPostPasteSwapBack)")
+vim.keymap.set("n", "<A-p>", "<Plug>(YoinkPostPasteSwapForward)")
+vim.keymap.set("n", "p", "<Plug>(YoinkPaste_p)")
+vim.keymap.set("n", "P", "<Plug>(YoinkPaste_P)")
+vim.keymap.set("n", "gp", "<Plug>(YoinkPaste_gp)")
+vim.keymap.set("n", "gP", "<Plug>(YoinkPaste_gP)")
+vim.keymap.set({ "n", "x" }, "y", "<Plug>(YoinkYankPreserveCursorPosition)")

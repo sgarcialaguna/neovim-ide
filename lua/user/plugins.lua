@@ -8,8 +8,6 @@ if not vim.loop.fs_stat(lazypath) then
 		"https://github.com/folke/lazy.nvim.git",
 		lazypath,
 	})
-	print("Installing packer close and reopen Neovim...")
-	vim.cmd([[packadd packer.nvim]])
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -29,11 +27,15 @@ lazy.setup({
 	"tpope/vim-fugitive",
 	"tpope/vim-abolish",
 	"rhysd/clever-f.vim",
-    { "gbprod/cutlass.nvim", event="VeryLazy", config = {
-        cut_key = "x",
-        override_del = true,
-        exclude = { "ns", "nS" }
-    }},
+	{
+		"gbprod/cutlass.nvim",
+		config = {
+			cut_key = "x",
+			override_del = true,
+			exclude = { "ns", "nS" },
+		},
+	},
+	"svermeulen/vim-yoink",
 
 	{ "windwp/nvim-autopairs", enabled = not vim.g.vscode }, -- Autopairs, integrates with both cmp and treesitter
 	{ "windwp/nvim-ts-autotag", enabled = not vim.g.vscode }, -- Autopairs, integrates with both cmp and treesitter
