@@ -48,7 +48,3 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 --avoid losing focus when changing to another windows and lazygit is open
 vim.cmd("autocmd FocusGained * set mouse+=a")
 vim.cmd("autocmd FocusLost * set mouse=")
-
--- Pin buffers
-vim.cmd("autocmd BufEnter * if &filetype=='CHADTree' | PinBuffer! | endif")
-vim.cmd("autocmd BufEnter * if &filetype=='toggleterm' | PinBuffer! | endif")
