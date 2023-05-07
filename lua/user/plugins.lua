@@ -25,7 +25,7 @@ lazy.setup({
 	"tpope/vim-repeat",
 	"ggandor/leap.nvim",
 	"tpope/vim-fugitive",
-	"tpope/vim-abolish",
+	"tpope/vim-abolish", 
 	"rhysd/clever-f.vim",
 	{
 		"gbprod/cutlass.nvim",
