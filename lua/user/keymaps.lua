@@ -48,6 +48,7 @@ if vim.g.vscode then
 	vim.keymap.set("n", "<leader>gr", "<cmd>call VSCodeNotify('git.revertSelectedRanges')<CR>")
 	vim.keymap.set("n", "<leader>gR", "<cmd>call VSCodeNotify('workbench.action.files.revert')<CR>")
 	vim.keymap.set("n", "<leader>gd", "<cmd>call VSCodeNotify('gitlens.diffLineWithWorking')<CR>")
+	vim.keymap.set("n", "<leader>e", "<cmd>call VSCodeNotify('workbench.view.explorer')<CR>")
 
 	vim.keymap.set("n", "<leader>xx", "<cmd>call VSCodeNotify('workbench.actions.view.problem')<CR>")
 end
